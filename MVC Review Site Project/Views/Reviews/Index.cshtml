@@ -1,9 +1,11 @@
 ﻿@model IEnumerable<MVC_Review_Site_Project.Models.Reviews>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Reviews";
 }
-
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
 <h2>Reviews</h2>
 <div class="row">
     @foreach (var item in Model)
@@ -11,6 +13,7 @@
         <div class="col-md-4">
             <div class="thumbnail">
                 <div class="caption">
+                    <p>@Html.DisplayNameFor(model => model.Category.TechType): @Html.DisplayFor(modelItem => item.Category.TechType)</p>
                     <h3>@Html.DisplayFor(modelItem => item.Title)</h3>
                     <p>@Html.DisplayFor(modelItem => item.Summary)</p>
                     <p><span class="label label-default">@Html.DisplayNameFor(model => model.Rating): @Html.DisplayFor(modelItem => item.Rating) </span></p>
