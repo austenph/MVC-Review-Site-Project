@@ -3,27 +3,29 @@
 @{
     ViewBag.Title = "Reviews";
 }
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<!--Reviews Page-->
 <h2>Reviews</h2>
+<!--Create New Label-->
+<p>
+    <span class="label label-default createreview">@Html.ActionLink("Create New", "Create")</span>
+</p>
+<!--Foreach Loop for that displays each review, bootstrap added-->
 <div class="row">
     @foreach (var item in Model)
     {
-        <div class="col-md-4">
+        <div class="col-md-4 review">
             <div class="thumbnail">
                 <div class="caption onereview">
                     <p>@Html.DisplayNameFor(model => model.Category.TechType): @Html.DisplayFor(modelItem => item.Category.TechType)</p>
                     <h3>@Html.DisplayFor(modelItem => item.Title)</h3>
                     <p>@Html.DisplayFor(modelItem => item.Summary)</p>
-                    <p><span class="label label-default">@Html.DisplayNameFor(model => model.Rating): @Html.DisplayFor(modelItem => item.Rating) </span></p>
-                    @Html.ActionLink("Details", "Details", new { id = item.ReviewID }, new { @class = "btn btn-primary", role = "button" })
+                    <p><span class="label label-default">@Html.DisplayNameFor(model => model.Rating): @Html.DisplayFor(modelItem => item.Rating)</span></p> @Html.ActionLink("Details", "Details", new { id = item.ReviewID }, new { @class = "btn btn-primary", role = "button" })
                 </div>
             </div>
         </div>
     }
 </div>
-
+<!--Commented Out Table from Default, kept for reference-->
 @*<table class="table">
     <tr>
         <th>
@@ -57,40 +59,40 @@
     </tr>*@
 
 @*@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category.TechType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ReviewContent)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Author)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Rating)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Summary)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProductName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CompanyName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ReviewID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ReviewID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ReviewID })
-        </td>
-    </tr>
-}
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.TechType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReviewContent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Summary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompanyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ReviewID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ReviewID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ReviewID })
+            </td>
+        </tr>
+    }
 
-</table>*@
+    </table>*@

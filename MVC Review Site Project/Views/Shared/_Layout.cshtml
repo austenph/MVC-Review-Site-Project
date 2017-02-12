@@ -8,6 +8,7 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+    <!--Navbar With Home, Review and Categories Link-->
     <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -19,19 +20,20 @@
                 @Html.ActionLink("TechNewb", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li>@Html.ActionLink("Reviews", "Index", "Reviews")</li>
-                        <li>@Html.ActionLink("Categories", "Index", "Categories")</li>
-                    </ul>
-                </div>
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Reviews", "Index", "Reviews")</li>
+                    <li>@Html.ActionLink("Categories", "Index", "Categories")</li>
+                </ul>
             </div>
         </div>
+    </div>
+    <!--Content of Page Goes here-->
     <div class="container-fluid body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - TechNewbs</p>
+            <p>&copy; @DateTime.Now.Year - TechNewbs. copywrite laws go here and other tiny text</p>
         </footer>
     </div>
 

@@ -2,30 +2,39 @@
     padding-top: 50px;
     padding-bottom: 20px;
 }
-.navbar{
-    background-color:#AE0100;
+/*NAVBAR*/
+.navbar {
+    background-color: #AE0100;
 }
+
 .navbar-default .navbar-nav > li > a {
     color: white;
 }
+
 .navbar-default .navbar-brand {
     color: white;
 }
+
 .navbar-fixed-top {
     top: 0;
-    border-top-width:1px;
+    border-top-width: 1px;
     border-bottom-width: 5px;
 }
- .hometron {
+/*JUMBOTRON STYLE*/
+.hometron {
     background-image: url('../images/jumbrotronimage.jpg');
-    background-size:cover;
-    height:400px;
+    background-size: cover;
+    height: 400px;
+}
+
+.jumbotron h1, .jumbotron .h1 {
+    color: white;
 }
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
-    background-color:silver;
+    background-color: silver;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -34,19 +43,43 @@
 .dl-horizontal dt {
     white-space: normal;
 }
-.onereview{
-    background-color: lightblue;
+/*REVIEW COLUMNS*/
+.onereview {
+    background-color: white;
     border: none;
-        padding:0px;
-           border: none;
+    border: none;
 }
-.thumbnail{
-    padding:0px;
-    border:none;
-    margin:0px;
+
+.btn {
+    display: inline-block;
+    position: absolute;
 }
-.jumbotron h1, .jumbotron .h1 {
-    color:white;
+
+.btn-primary {
+    color: white;
+    background-color: #AE0100;
+    border-color: #AE0100;
+}
+
+.thumbnail {
+    border: none;
+    margin: 0px;
+    padding-bottom: 50px;
+    padding-top: 1px;
+}
+/*Create New*/
+.createreview {
+    margin-top: 5px;
+    color: white;
+    height: 50px;
+    width: 100px;
+    background-color: #AE0100;
+    border-color: #AE0100;
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }
 /* Set width on the form input elements since they're 100% wide by default */
 input,
