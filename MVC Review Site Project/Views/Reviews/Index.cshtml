@@ -4,12 +4,24 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Reviews</h2>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <div class="caption">
+                    <h3>@Html.DisplayFor(modelItem => item.Title)</h3>
+                    <p>@Html.DisplayFor(modelItem => item.Summary)</p>
+                    <p><span class="label label-default">@Html.DisplayNameFor(model => model.Rating): @Html.DisplayFor(modelItem => item.Rating) </span></p>
+                    @Html.ActionLink("Details", "Details", new { id = item.ReviewID }, new { @class = "btn btn-primary", role = "button" })
+                </div>
+            </div>
+        </div>
+    }
+</div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+@*<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Category.TechType)
@@ -39,9 +51,9 @@
             @Html.DisplayNameFor(model => model.Price)
         </th>
         <th></th>
-    </tr>
+    </tr>*@
 
-@foreach (var item in Model) {
+@*@foreach (var item in Model) {
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Category.TechType)
@@ -78,4 +90,4 @@
     </tr>
 }
 
-</table>
+</table>*@
