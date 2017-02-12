@@ -11,6 +11,16 @@
 .navbar-default .navbar-brand {
     color: white;
 }
+.navbar-fixed-top {
+    top: 0;
+    border-top-width:1px;
+    border-bottom-width: 5px;
+}
+ .hometron {
+    background-image: url('../images/jumbrotronimage.jpg');
+    background-size:cover;
+    height:400px;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -24,7 +34,20 @@
 .dl-horizontal dt {
     white-space: normal;
 }
-
+.onereview{
+    background-color: lightblue;
+    border: none;
+        padding:0px;
+           border: none;
+}
+.thumbnail{
+    padding:0px;
+    border:none;
+    margin:0px;
+}
+.jumbotron h1, .jumbotron .h1 {
+    color:white;
+}
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
